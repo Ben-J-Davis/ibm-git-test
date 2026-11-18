@@ -1,0 +1,25 @@
+---
+application: "HMLRBackendApplication"
+schemaVersion: "applicationDescriptor/0.11.0"
+description: "HMLRBackendApplication"
+owner: "BEN"
+sources:
+- name: "pli"
+  repositoryPath: "HMLRBackendApplication/src/pli"
+  language: "PL/I"
+  languageProcessor: "PLI"
+  fileExtension: "pli"
+  artifactsType: "Program"
+  files:
+  - name: "sai4ibm"
+    type: "PLIDB2"
+    usage: "undefined"
+baselines:
+- branch: "main"
+  type: "release"
+  reference: "rel-1.0.0"
+  buildid: "baseline"
+- branch: "release/rel-1.0.0"
+  type: "release"
+  reference: "rel-1.0.0"
+  buildid: "baseline"

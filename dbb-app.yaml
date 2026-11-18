@@ -1,0 +1,15 @@
+---
+version: "1.0.0"
+application:
+  name: "HMLRBackendApplication"
+  tasks:
+  - task: "PLI"
+    variables:
+    - name: "languageConfigurationSource"
+      value: "${DBB_BUILD}/build-configuration/PLIDB2.yaml"
+      forFiles:
+      - "HMLRBackendApplication/src/pli/sai4ibm.pli"
+  - task: "ImpactAnalysis"
+    variables:
+    - name: "impactQueryPatterns"
+      value: []

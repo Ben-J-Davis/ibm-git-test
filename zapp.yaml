@@ -1,0 +1,22 @@
+---
+name: "HMLRBackendApplication"
+description: "ZAPP file for the HMLRBackendApplication application"
+version: "3.0.0"
+author:
+  name: "IBM CORPORATION"
+profiles:
+- name: "zBuilder-userbuild"
+  type: "dbb"
+  settings:
+    command: "$DBB_HOME/bin/dbb build"
+    lifecycle: "user"
+    lifecycleArgs:
+    - "--hlq ${dbbHlq}"
+    - "--errPrefix ${errPrefix}"
+    additionalDependencies:
+    - "dbb-app.yaml"
+    logFilePatterns:
+    - "*.log"
+    - "BuildReport.html"
+    - "*.json"
+propertyGroups: []
